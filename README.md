@@ -3,6 +3,8 @@ BTSync Ver.1.4.111, the last one with DHT.
 
 The purpose of project is let people deploy the sync through DHT quickly.
 
+---
+
 The package hash is as below:
 
 **SHA256**
