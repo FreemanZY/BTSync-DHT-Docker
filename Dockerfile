@@ -8,4 +8,5 @@ ADD btsync.conf /home
 EXPOSE 8888
 EXPOSE 17173
 VOLUME ["/home/data"]
-ENTRYPOINT ["/home/btsync","--config","/home/btsync.conf"]
+ENTRYPOINT ["/home/btsync"]
+CMD ["--config", "/home/btsync.conf", "--nodaemon"]
