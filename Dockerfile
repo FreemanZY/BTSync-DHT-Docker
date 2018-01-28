@@ -7,5 +7,5 @@ RUN mkdir /home/data
 ADD btsync.conf /home
 EXPOSE 8888
 EXPOSE 17173
-VOLUME ["/data"]
+VOLUME ["/home/data"]
 ENTRYPOINT ["/home/btsync","--config","/home/btsync.conf"]
