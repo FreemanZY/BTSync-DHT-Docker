@@ -1,7 +1,7 @@
 # BTSync-DHT-Docker
 BTSync Ver.1.4.111, the last one with DHT.
 
-The purpose of project is let people deploy the sync through DHT quickly.
+The purpose of the project is letting people deploy the sync through DHT quickly.
 
 ---
 
