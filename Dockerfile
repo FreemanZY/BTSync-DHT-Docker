@@ -5,7 +5,8 @@ RUN cd /home && tar -xvf btsync.tar.gz && rm btsync.tar.gz
 RUN mkdir /home/.sync
 RUN mkdir /home/data
 ADD btsync.conf /home
+ADD run.sh /run.sh
 EXPOSE 8888
 EXPOSE 17173
 VOLUME ["/data"]
-ENTRYPOINT ["/home/btsync","--config /home/btsync.conf"]
+ENTRYPOINT ["/run.sh"]
