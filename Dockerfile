@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y curl \
     && tar -xvf btsync.tar.gz && rm btsync.tar.gz \
     && mkdir .sync data \
     && apt-get purge -y --auto-remove curl
-ADD btsync.conf
+ADD btsync.conf /home
 EXPOSE 8888
 EXPOSE 17173
 VOLUME ["/home/data"]
