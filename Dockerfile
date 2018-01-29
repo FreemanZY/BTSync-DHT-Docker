@@ -18,6 +18,5 @@ RUN apk add --no-cache --update-cache --update curl ca-certificates && \
 COPY btsync.conf /btsync/conf/btsync.conf
 EXPOSE 8888 17173
 VOLUME /btsync/folders
-ENTRYPOINT ["/home/btsync"]
-CMD ["--config", "/home/btsync.conf", "--nodaemon"]
+ENTRYPOINT ["/opt/btsync/btsync"]
 CMD ["--nodaemon","--config","/btsync/conf/btsync.conf","--log","/btsync/data/btsync.log"]
