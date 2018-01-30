@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.7
 ENV GLIBC_VERSION 2.26-r0
 
 RUN apk add --no-cache --update-cache --update curl ca-certificates && \
