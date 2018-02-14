@@ -11,6 +11,8 @@ RUN apk add --no-cache --update-cache --update curl ca-certificates && \
     tar -xzf /tmp/btsync.tar.gz -C /opt/btsync && \
     apk del curl ca-certificates && \
     rm -rf /tmp/* /var/cache/apk/* && \
+    mkdir -p /btsync/data && \
+    mkdir -p /btsync/conf && \
     mkdir -p /btsync/folders
 
 EXPOSE 8888 55555
