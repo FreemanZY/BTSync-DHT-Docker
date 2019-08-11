@@ -24,7 +24,7 @@ btsync_x64-1.4.111.tar.gz
       -p 127.0.0.1:$WEBUI_PORT:8888 -p 55555 \
       -v $DATA_FOLDER:/mnt/sync \
       --restart on-failure \
-      bittorrent/sync
+      freemanzy/btsync-dht-docker
 
 Go to localhost:$WEBUI_PORT in a web browser to access the webui.
 
@@ -36,7 +36,7 @@ If you do not want to limit the access to the webui to localhost, run instead:
       -p $WEBUI_PORT:8888 -p 55555 \
       -v $DATA_FOLDER:/mnt/sync \
       --restart on-failure \
-      bittorrent/sync
+      freemanzy/btsync-dht-docker
 
 #### Extra directories
 
@@ -48,6 +48,15 @@ If you need to mount extra directories, mount them in /mnt/mounted_folders:
       -v <OTHER_DIR>:/mnt/mounted_folders/<DIR_NAME> \
       -v <OTHER_DIR2>:/mnt/mounted_folders/<DIR_NAME2> \
       --restart on-failure \
-      bittorrent/sync
+      freemanzy/btsync-dht-docker
 
 Do not create directories at the root of mounted_folders from the Sync webui since this new folder will not be mounted on the host.
+
+# Volume
+
+* /mnt/sync - State files and Sync folders
+
+# Ports
+
+* 8888 - Webui
+* 55555 - Listening port for Sync traffic
